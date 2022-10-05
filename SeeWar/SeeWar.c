@@ -83,7 +83,7 @@ static BOOL LoadGLTextures(void)
     // Загрузите Побитовое отображение, 
 	// Проверяйте На наличие Ошибок, 
 	//Если Побитовое отображение Не Обнаружившее Выход
-    if ((TextureImage[0] = LoadBMP("background.bmp")))
+    if ((TextureImage[0] == LoadBMP("background.bmp")))
     {
         fStatus = TRUE;
 
@@ -516,13 +516,13 @@ void ClearBoards()
 void Feur()
 {
 	//Первый игрок стреляет по кораблям второго
-	PlaySound(MAKEINTRESOURCE(IDR_WAV_DING),hInstance,SND_RESOURCE|SND_ASYNC);
+	// PlaySound(MAKEINTRESOURCE(IDR_WAV_DING),hInstance,SND_RESOURCE|SND_ASYNC);
 	if(player==1) 
 	{
 		if(Player2[X][Y]<10) Player2[X][Y]+=10;
 		if(Player2[X][Y]==11) 
 		{	//Играть звук
-			PlaySound(MAKEINTRESOURCE(IDR_WAV_DING),hInstance, SND_RESOURCE|SND_ASYNC);
+			// PlaySound(MAKEINTRESOURCE(IDR_WAV_DING),hInstance, SND_RESOURCE|SND_ASYNC);
 			DeathP2++;
 		}
 	}
@@ -531,7 +531,7 @@ void Feur()
 		if(Player1[X][Y]<10) Player1[X][Y]+=10;
 		if(Player1[X][Y]==11)
 		{
-			PlaySound(MAKEINTRESOURCE(IDR_WAV_DING),hInstance,SND_RESOURCE|SND_ASYNC);
+			// PlaySound(MAKEINTRESOURCE(IDR_WAV_DING),hInstance,SND_RESOURCE|SND_ASYNC);
 			DeathP1++;
 			
 		}
