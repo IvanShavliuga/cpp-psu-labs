@@ -18,7 +18,7 @@ int main()
 {
 	Square x;
 	x.set_size(10);
-	cout << "Area of square with side length " << x.get_size() << " is "
-		 << x.area() << endl;
+	cout << "Area of square with side length "; // 	cout << "Area of square with side length " << x.get_size() << " is "
+		 // << x.area() << endl;
 	return 0;
 }
